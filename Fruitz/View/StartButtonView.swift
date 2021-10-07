@@ -6,15 +6,16 @@
 //
 
 import SwiftUI
+import Foundation
 
 struct StartButtonView: View {
     //MARK: Properties
-    @AppStorage("isOnboarding") var isOnboarding: Bool?
 
+    @AppStorage("isOnboarding") var isOnboarding: Bool?
     var body: some View {
         //MARK: View
         Button {
-           isOnboarding = false
+            isOnboarding = false
         } label: {
             HStack(spacing: 8) {
                 Text("Start")
@@ -29,8 +30,6 @@ struct StartButtonView: View {
             )
         }//Button
         .accentColor(.white)
-
-
     }
 }
 

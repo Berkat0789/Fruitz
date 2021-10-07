@@ -8,9 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    private let fruits = fruitsData
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            List(fruits) { fruit in
+                FruitRowView(fruit: fruit)
+                
+            }//LIst
+            .navigationTitle("Fruits")
+        }// NAvigation
     }
 }
 

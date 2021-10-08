@@ -22,10 +22,15 @@ struct DetailView: View {
                             .font(.largeTitle)
                             .foregroundColor(fruit.gradientColors[1])
                             .fontWeight(.heavy)
+                        //Nutrition
+                        FruitNutritionView(friut: fruit)
+
                         //Description
                         Text(fruit.description)
-                        //Nutrition
                         //Link
+                        SourceLinkView()
+                            .padding(.top, 12)
+                            .padding(.bottom, 12)
                     } //Vstack
                     .padding(.horizontal, 10)
                     .navigationBarHidden(true)

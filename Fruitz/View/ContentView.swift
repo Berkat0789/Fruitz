@@ -13,8 +13,9 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List(fruits) { fruit in
-                FruitRowView(fruit: fruit)
-                
+                NavigationLink(destination: DetailView(fruit: fruit)) {
+                    FruitRowView(fruit: fruit)
+                }
             }//LIst
             .navigationTitle("Fruits")
         }// NAvigation
